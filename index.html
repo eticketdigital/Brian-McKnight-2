@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brian McKnight Live In Medan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* VIDEO BACKGROUND */
+.video-bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+}
+
+/* DARK OVERLAY */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+  z-index:-1;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+  z-index:999;
+}
+
+.logo{
+  font-size:1.5rem;
+  font-weight:700;
+}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+}
+
+section{
+  padding:100px 8%;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.tag{
+  display:inline-block;
+  padding:10px 22px;
+  border-radius:100px;
+  background:rgba(255,255,255,0.1);
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-size:5rem;
+  line-height:1;
+  margin-bottom:25px;
+  font-weight:800;
+}
+
+.hero p{
+  color:#d6d6d6;
+  line-height:1.8;
+  margin-bottom:40px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:15px 30px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:#4f7cff;
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-5px);
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,0.3);
+  color:white;
+}
+
+.btn-secondary:hover{
+  background:white;
+  color:black;
+}
+
+/* COUNTDOWN */
+.countdown{
+  margin-top:50px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.box{
+  width:120px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+}
+
+.box h2{
+  font-size:2.5rem;
+  color:#82aaff;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.title h2{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+/* INFO */
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  padding:40px;
+  border-radius:25px;
+  backdrop-filter:blur(10px);
+}
+
+/* TICKETS */
+.ticket-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.ticket{
+  background:rgba(255,255,255,0.08);
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+}
+
+.ticket h3{
+  font-size:2rem;
+}
+
+.price{
+  margin:20px 0;
+  font-size:2rem;
+  font-weight:700;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:50px 8%;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  nav ul{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:3rem;
+  }
+
+  .box{
+    width:90px;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline webkit-playsinline class="video-bg">
+
+  <!-- GANTI NAMA VIDEO DISINI -->
+  <source src="background.mp4" type="video/mp4">
+
+</video>
+
+<div class="overlay"></div>
+
+<!-- NAVBAR -->
+<nav>
+
+  <div class="logo">
+    BRIAN MCKNIGHT
+  </div>
+
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#tickets">Tickets</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+  </ul>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="tag">
+      JULY 12 2026 • MEDAN
+    </div>
+
+    <h1>
+      BRIAN <br>
+      MCKNIGHT
+    </h1>
+
+    <p>
+      Live In Medan Featuring Raisa.<br>
+      Romantic Concert Experience.
+    </p>
+
+    <div class="buttons">
+
+      <a href="#tickets" class="btn btn-primary">
+        BUY TICKETS
+      </a>
+
+      <a href="#about" class="btn btn-secondary">
+        EVENT DETAILS
+      </a>
+
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown">
+
+      <div class="box">
+        <h2 id="days">00</h2>
+        <span>Days</span>
+      </div>
+
+      <div class="box">
+        <h2 id="hours">00</h2>
+        <span>Hours</span>
+      </div>
+
+      <div class="box">
+        <h2 id="minutes">00</h2>
+        <span>Minutes</span>
+      </div>
+
+      <div class="box">
+        <h2 id="seconds">00</h2>
+        <span>Seconds</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="title">
+    <h2>About Event</h2>
+    <p>Luxury Concert Experience</p>
+  </div>
+
+  <div class="info-grid">
+
+    <div class="card">
+      <h3>📍 Venue</h3>
+      <br>
+      <p>
+        Selecta Convention Hall Medan
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎤 Featuring</h3>
+      <br>
+      <p>
+        Brian McKnight Featuring Raisa
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🕘 Schedule</h3>
+      <br>
+      <p>
+        July 12 2026<br>
+        Open Gate 6PM
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TICKETS -->
+<section id="tickets">
+
+  <div class="title">
+    <h2>Tickets</h2>
+    <p>Choose Your Seat</p>
+  </div>
+
+  <div class="ticket-grid">
+
+    <div class="ticket">
+      <h3>VIP</h3>
+      <div class="price">2.175K</div>
+      <p>Front Stage • Meet & Greet</p>
+    </div>
+
+    <div class="ticket">
+      <h3>Platinum</h3>
+      <div class="price">1.700K</div>
+      <p>Premium Area</p>
+    </div>
+
+    <div class="ticket">
+      <h3>Gold</h3>
+      <div class="price">1.300K</div>
+      <p>Great View</p>
+    </div>
+
+    <div class="ticket">
+      <h3>Silver</h3>
+      <div class="price">870K</div>
+      <p>Standard Area</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+
+  <div class="title">
+    <h2>Gallery</h2>
+    <p>Your Uploaded Images</p>
+  </div>
+
+  <div class="gallery">
+
+    <img src="image1.jpg">
+    <img src="image2.jpg">
+    <img src="image3.jpg">
+    <img src="image4.jpg">
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <h2>
+    Brian McKnight Live In Medan
+  </h2>
+
+  <br>
+
+  <p>
+    © 2026 All Rights Reserved
+  </p>
+
+</footer>
+
+<script>
+
+/* COUNTDOWN */
+const targetDate = new Date("2026-07-12T20:00:00").getTime();
+
+const countdown = setInterval(() => {
+
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if(distance <= 0){
+
+    clearInterval(countdown);
+
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
